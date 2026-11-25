@@ -1,4 +1,4 @@
-\# Parallel Reduction in CUDA
+# Parallel Reduction in CUDA
 
 
 
@@ -6,9 +6,9 @@ CUDA Lab Evaluation, Theme 1.
 
 
 
-\- GPU: NVIDIA GeForce RTX 5060 Ti
+GPU: NVIDIA GeForce RTX 5060 Ti
 
-\- Kernels: v1 interleaved, v2 sequential, v3 grid-stride + warp shuffle + atomicAdd, with Thrust as a library reference
+ Kernels: v1 interleaved, v2 sequential, v3 grid-stride + warp shuffle + atomicAdd, with Thrust as a library reference
 
 \- Timing: CUDA events, average of 10 runs after a warm-up (CPU: average of 5 runs)
 
