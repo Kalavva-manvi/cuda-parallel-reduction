@@ -1,0 +1,18 @@
+GPU: NVIDIA GeForce RTX 5060 Ti | N = 1048576
+CPU ref sum = 518395.40
+CPU time (avg of 5 runs) = 0.4768 ms
+
+== Block-size sweep (times in ms) ==
+Block            v1         v2         v3      v3 GB/s    Check
+128          0.0852     0.0854     0.0634         66.1     PASS
+256          0.0855     0.0845     0.0640         65.5     PASS
+512          0.0882     0.0859     0.0609         68.9     PASS
+1024         0.0945     0.0913     0.0876         47.9     PASS
+
+Thrust reduce: 0.0505 ms  (9.44x vs CPU)  PASS
+
+== Transfer cost ==
+Host-to-device copy of 4.2 MB: 0.5022 ms (8.4 GB/s)
+v3 kernel (block 256): 0.0664 ms
+Copy takes 7.6x longer than the reduction kernel
+Copy + v3 total: 0.5686 ms vs CPU 0.4768 ms (0.84x)

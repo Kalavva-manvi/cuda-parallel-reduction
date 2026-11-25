@@ -1,0 +1,12 @@
+GPU: NVIDIA GeForce RTX 5060 Ti | N = 1048576
+CPU ref sum = 518395.40
+CPU time (avg of 5 runs) = 0.4766 ms
+
+Version            Time(ms)  Speedup/CPU       GB/s  Check
+v1 interleaved       0.0867        5.50x       48.4   PASS
+v2 sequential        0.0852        5.60x       49.3   PASS
+v3 shuffle+atom      0.0644        7.40x       65.1   PASS
+Thrust               0.0412       11.57x      101.8   PASS
+
+sums: v1=518395.38 v2=518395.41 v3=518395.25 thrust=518395.41
+Average (v3)   : 0.494380
